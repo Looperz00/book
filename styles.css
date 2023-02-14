@@ -1,0 +1,671 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+
+:root{
+    --purple: #1F0026;
+    --white: #ffffff;
+    --black: #242424;
+}
+
+
+html {
+    width: 100%;
+    background-color: var(--purple);
+    scroll-behavior: smooth;
+}
+
+body {
+    z-index: 2;
+    
+}
+
+/*Estilos generales*/
+
+h1{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: lighter;
+    line-height: 50px;
+    padding-bottom: 10px;
+    z-index: 10;
+    letter-spacing: 0;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: white;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 10;
+  
+}
+
+
+
+
+h2 {
+font-size:30px;
+font-family: 'El Messiri', sans-serif;
+font-weight: lighter;
+font-size: 28px;
+letter-spacing: 1px;
+}
+
+h2, h3, h4, p, li, a  {
+    color: var(--white);
+    z-index: 10;
+}
+
+p, a{
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--white);
+    z-index: 10;
+}
+
+p {
+    font-family: 'Darker Grotesque', sans-serif;
+    margin:  auto !important;
+
+    
+}
+
+
+    .cps {
+        font-family: 'El Messiri', sans-serif;
+
+    }
+
+
+ul{
+    list-style: none;
+}
+
+
+/*Estilos secciones*/
+section {
+width: 100%;
+min-height: 100vh;
+    height: auto;
+padding: 10px;
+display: block;
+align-items: center;
+transition: 1s;
+
+
+}
+
+
+/*Estilos columnas*/
+
+.col {
+    width: 100%;
+    padding: 10px; 
+    display: grid;
+    justify-content: center;  
+
+}
+
+
+header {
+        
+    display: grid;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+  
+header .main-nav  {
+    background: #242424;
+    top: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 20%;
+    display:none;
+
+    }
+
+
+
+header .main-nav ul .nav-item{
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    font-family: 'El Messiri', sans-serif;
+
+
+}
+
+header .logo {
+    text-align: center;
+    padding: 30px;
+
+}
+
+
+
+/*Estilos Active*/
+ 
+
+    .btn {
+    font-size: 14px!important;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 20px;
+    border-radius: 50px;
+    background-color: var(--black);
+    color: var(--white);
+    transition: .5s;
+    border: solid 3px var(--black);
+    z-index: 10; 
+    font-family: 'El Messiri', sans-serif;
+    mix-blend-mode: hard-light;
+}
+
+.btn:hover {
+    background: transparent!important;
+    border: double 3px #fff;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+
+.btn-active {
+    background-color: transparent!important;
+    border: double 4px #fff !important;
+    color: #fff !important;
+    backdrop-filter: blur(10px)!important;
+}
+
+.bg{
+    width: 350px;
+    height: 350px;
+    border-color: #CCC;
+    border-style: double;
+    border-width: 3px; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #1E026D;
+    -webkit-box-shadow: 0 0 40px #1E026D;
+    -webkit-appearance: none;
+    position: fixed;
+    z-index: 0;
+    transition: 1s;
+    transform: perspective(1500px) rotateZ(-15deg) scale(.8);
+    filter: blur(50px) brightness(1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+    
+    
+  }
+
+  .bg:hover {
+  transform: perspective(1500px) rotateZ(90deg) scale(1.2);
+
+}
+
+  .circle{
+    width: 250px;
+    height: 250px;
+    background: cyan;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 20s reverse infinite;
+    filter: blur(140px);
+    border: 10px solid #fff;
+    mix-blend-mode: saturation;
+    
+  
+  }
+  
+
+
+.circle1{
+    width: 200px;
+    height: 200px;
+    background: darkgreen;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 16s linear infinite;
+    filter: blur(120px) brightness(1.5);
+    border: 10px solid darkgreen;
+    mix-blend-mode: plus-lighter;
+    
+  
+  }
+  
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+  }
+  
+  /*animations*/
+.reveal {
+    position: relative;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: 1.6s all ease;
+  
+  }
+  
+  .reveal.active {
+    transform: translateY(-20px);
+    opacity: 1;
+    transition-delay: .2s;
+  }
+
+
+/*Estilos Home*/
+#home {
+    text-align: center; 
+    justify-content: center; 
+    flex-direction: column;   
+    display:flex;
+}
+
+#home a {
+    padding: 20px;
+    display: block;
+}
+
+
+
+
+#bio .col {
+    margin: auto;
+    text-align: center;
+}
+
+
+section:hover h1{
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: none;
+    -webkit-text-stroke-color: none;
+}
+
+
+#bio .col .txt-bio {
+    width: 80%;
+    margin: auto;
+
+}
+
+#bio .col .img-bio {
+    width: 80%;
+    margin: auto;
+    border-radius: 0 75px 100px 50px;
+
+
+}
+
+
+.btn-read {
+    
+    width: 30%;
+    padding: 5px 10px;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+
+
+
+
+/*Estilos Bio*/
+
+
+/*Estilos Capabilities*/
+
+    
+
+.title { 
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    }
+
+.services li {
+    margin: 10px; 
+        }
+
+.btn-serv {
+    font-size: 14px!important;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 50px;
+    background-color: var(--black);
+    color: var(--white);
+    transition: .5s;
+    border: solid 3px var(--black);
+    font-family: 'El Messiri', sans-serif;
+
+}
+
+
+.btn-serv:hover {
+  
+    background: transparent!important;
+    border: double 3px #fff;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+
+/* ESTILOS ACORDION*/
+
+.accordion-body {
+    width: 85%;
+    margin: 0 auto;
+    color: var(--white);
+    
+  }
+
+.accordion {
+    
+    margin: 0 auto;
+    color: var(--white);
+    padding: 5px;
+
+  }
+
+.accordion .container {
+   
+    position: relative;
+    margin: auto;
+  }
+  
+  .accordion .label {
+    position: relative;
+    padding: 6px 0;
+    font-size: 30px;
+    color: var(--white);
+    text-shadow: 0 0 4px var(--black);
+    cursor: pointer;
+  }
+  
+  .accordion .label::before {
+    content: '+';
+    color: var(--white);
+    position: absolute;
+    right: 20px;
+    font-size: 15px;
+    background: var(--black);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+    border-radius: 100px;
+    background-color: var(--black);
+    color: var(--white);
+    transition: .5s;
+    border: solid 3px var(--black);
+    z-index: 10;
+    box-shadow: 0 0 10px var(--white);
+  }
+  
+  .accordion .content {
+    position: relative; 
+    height: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+  
+  .accordion hr {
+    width: 100%;
+    margin-left: 0;
+    border: .2px solid var(--white);
+  }
+  
+  .accordion .container.active .content {
+    height: 180px;
+  }
+  
+  .accordion .container.active .label::before {
+    content: '-';
+    font-size: 15px;
+    background: transparent;
+    border: double 3px #fff;
+  }
+  
+
+
+
+
+
+
+@media (min-width: 800px) {
+body {
+    width: 100%;
+}
+
+/*Estilos secciones*/
+section {
+    display: flex;
+    padding: 20px;
+    
+    }
+
+
+/*Estilos columnas*/
+
+.col {
+    width: 50%;
+    padding: 20px;
+    
+
+
+}
+
+
+p {
+    font-family: 'Darker Grotesque', sans-serif;
+    margin: 0 !important;
+
+    
+
+}
+
+/*Barra de navegación */
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+
+    justify-content: space-between;
+}
+
+header .logo {
+}
+
+header .main-nav {
+    align-self: center;
+    position: sticky;
+    top: 15px;
+    display: grid;
+    background: none;
+    right: 0;
+    left: 0;
+    height: auto;
+    padding-top: 0;
+
+
+}
+
+  
+
+  
+    
+
+header .main-nav ul {
+    display: flex;
+    list-style: none;
+
+}
+
+header .main-nav ul .nav-item{
+    margin: 3px;
+
+}
+
+.btn {
+    font-size: 14px;
+    width: 100%;
+}
+
+.bg{
+    width: 530px;
+    height: 530px;
+
+}
+ 
+/*Estilos Bio*/
+
+#bio .col  {
+    margin: auto;
+    text-align: left;
+
+}
+
+#bio .col .txt-bio {
+    width: 70%;
+    margin: 0;
+
+}
+
+#bio .col .img-bio {
+    width: 50%;
+}
+
+
+.btn-read {
+    width: 20%;
+    margin: 20px 0;
+}
+
+
+
+/*Estilos Capabilities*/
+
+
+.services {
+    display: grid;
+    }
+.services li {
+        margin: 10px; 
+            }
+
+.btn-serv {
+      
+        width: 120%;
+        border-radius:0 50px 50px ;
+        text-align: left;
+       
+    }
+
+.btn-serv::before {
+        content: '+';
+        margin: 10px;
+        text-align: left;
+    }
+
+    .btn-serv:hover::before {
+        content: '–';
+        margin: 10px;
+        text-align: left;
+    }
+    
+
+    /* ESTILOS ACORDION*/
+
+.accordion-body {
+    margin: auto auto auto 0;
+    
+  }
+  .accordion-body {
+    width: 70%;
+  }
+
+  .accordion {
+    
+    margin: 0 auto;
+    color: var(--white);
+    padding: 5px;
+
+  }
+   
+  .accordion .label {
+    padding: 0;
+    font-size: 30px;
+   
+  }
+
+
+}
+
+
