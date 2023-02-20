@@ -564,8 +564,6 @@ footer {
     color: var(--white);
     position: absolute;
     right: 20px;
-    font-size: 15px;
-    background: var(--black);
     width: 20px;
     height: 20px;
     text-align: center;
@@ -574,9 +572,11 @@ footer {
     background-color: var(--black);
     color: var(--white);
     transition: .5s;
-    border: solid 3px var(--black);
     z-index: 10;
     box-shadow: 0 0 10px var(--white);
+    font-size: 15px;
+    background: transparent;
+    border: double 3px #fff;
   }
   
   .accordion .content {
@@ -605,8 +605,9 @@ footer {
   .accordion .container.active .label::before {
     content: '-';
     font-size: 15px;
-    background: transparent;
-    border: double 3px #fff;
+    background: var(--black);
+    border: solid 3px var(--black);
+ 
   }
   
 
@@ -638,6 +639,7 @@ section {
 
 
 }
+
 
 
 p {
@@ -789,3 +791,19 @@ header .main-nav ul .nav-item{
 }
 
 
+@media (min-width: 1500px) {
+
+    h1 {
+        font-size: 100px;
+        line-height: 90px;
+    }
+    
+    .btn {
+        font-size: 18px!important;
+   
+    
+    }
+
+ 
+    
+    }
