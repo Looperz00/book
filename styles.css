@@ -12,6 +12,12 @@
     --black: #242424;
 }
 
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10px 15px 4px;
+}
 
 html {
     width: 100%;
@@ -102,6 +108,15 @@ transition: 1s;
 }
 
 
+
+section:hover h1{
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: none;
+    -webkit-text-stroke-color: none;
+} 
+
+
 /*Estilos columnas*/
 
 .col {
@@ -164,28 +179,28 @@ header .logo {
     text-align: center;
     padding: 4px 20px;
     border-radius: 50px;
-    background-color: var(--black);
-    color: var(--white);
     transition: .5s;
-    border: solid 3px var(--black);
     z-index: 10; 
     font-family: 'El Messiri', sans-serif;
     mix-blend-mode: hard-light;
-}
-
-.btn:hover {
     background: transparent!important;
     border: double 3px #fff;
     color: #fff;
-    backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+    background: var(--black)!important;
+    color: var(--white);
+    border: solid 3px var(--black);
+
 }
 
 
 .btn-active {
-    background-color: transparent!important;
-    border: double 4px #fff !important;
-    color: #fff !important;
-    backdrop-filter: blur(10px)!important;
+    background: var(--black)!important;
+    color: var(--white);
+    border: solid 3px var(--black);
+  
 }
 
 .bg{
@@ -312,14 +327,14 @@ header .logo {
     text-align: center;
 }
 
-
+/*
 section:hover h1{
     color: #fff;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke-width: none;
     -webkit-text-stroke-color: none;
 }
-
+*/
 
 #bio .col .txt-bio {
     width: 80%;
@@ -342,6 +357,7 @@ section:hover h1{
     padding: 5px 10px;
     margin: 10px auto;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 
@@ -374,22 +390,124 @@ section:hover h1{
     text-align: center;
     padding: 5px 20px;
     border-radius: 50px;
-    background-color: var(--black);
     color: var(--white);
     transition: .5s;
     border: solid 3px var(--black);
     font-family: 'El Messiri', sans-serif;
+    background: transparent!important;
+    border: double 3px #fff;
+    cursor: pointer;
 
 }
 
 
 .btn-serv:hover {
   
-    background: transparent!important;
-    border: double 3px #fff;
-    color: #fff;
-    backdrop-filter: blur(10px);
+    background: var(--black)!important;
+    color: var(--white);
+    border: solid 3px var(--black);
 }
+
+
+
+.btn-serv-active {
+  
+    background: var(--black)!important;
+    color: var(--white);
+    backdrop-filter: blur(10px);
+    border: solid 3px var(--black);
+}
+
+
+/*Estilos Metodo*/
+
+
+
+
+.process{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: no-wrap;
+    overflow-x: auto;   
+}
+
+.process::-webkit-scrollbar {
+    width: .2em;
+}
+
+.process .step {
+    flex: 0 0 auto;
+    width: 300px;
+    height: auto;
+    max-width: 300px;
+    margin: auto 20px;
+    padding: 30px;
+    text-align: left;
+    border: solid 1px var(--white);
+    border-radius: 10px;
+    background-color: var(--black);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.process .step:hover {
+
+    box-shadow: 0 5px 45px black;
+}
+
+.process .step:hover h1{
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: none;
+    -webkit-text-stroke-color: none;
+    transition: .5s;
+}
+
+
+
+.process .step .title-step {
+
+    color: none !important;
+    -webkit-text-fill-color: none !important;
+    -webkit-text-stroke-width: none !important;
+    -webkit-text-stroke-color: none !important;
+    color: #fff;
+    font-size: 60px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: lighter;
+    line-height: 50px;
+    padding-bottom: 10px;
+    z-index: 10;
+    letter-spacing: 0;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: white;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 10;
+
+} 
+
+
+
+
+#method .process .step .btn{
+
+padding: 5px;
+
+}
+
+#method .process .step .btn:hover {
+    border: solid 3px var(--white);
+    border-radius: 50px;
+    background-color: var(--white)!important;
+    color: var(--black);
+   
+
+}
+
 
 
 
@@ -497,6 +615,7 @@ footer {
 
 
 
+
 @media (min-width: 800px) {
 body {
     width: 100%;
@@ -576,6 +695,7 @@ header .main-nav ul .nav-item{
 .btn {
     font-size: 14px;
     width: 100%;
+   
 }
 
 .bg{
